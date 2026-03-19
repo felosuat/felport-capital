@@ -54,27 +54,6 @@
     observer.observe(el);
   });
 
-  // --- Contact form handling ---
-  var form = document.getElementById('contactForm');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    var btn = form.querySelector('button[type="submit"]');
-    var originalText = btn.textContent;
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    // Simulate submission (replace with real endpoint)
-    setTimeout(function () {
-      btn.textContent = 'Message Sent';
-      form.reset();
-      setTimeout(function () {
-        btn.textContent = originalText;
-        btn.disabled = false;
-      }, 3000);
-    }, 1000);
-  });
-
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
